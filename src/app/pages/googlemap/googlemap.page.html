@@ -1,0 +1,76 @@
+
+
+<ion-content>
+  <div id="locationField">
+    <input id="autocomplete" (focus)="changeMapHieght('100vh') ; addressForm.reset()" clearInput clear-input="true"
+      placeholder="Search and set location of your restaurant" type="text" />
+  </div>
+  <div #map id="map"></div>
+  <div id="listing">
+    <table id="resultsTable">
+      <tbody id="results"></tbody>
+    </table>
+  </div>
+
+  <div *ngIf="restaurantDetails.formatted_address" class="map-setting-part">
+
+    <form #addressForm="ngForm">
+
+      <p style="font-weight: bold;">{{restaurantDetails?.name}}</p>
+
+      <h6 class="ion-text-left main-light-color" style="font-size: 14px;">
+        {{restaurantDetails?.formatted_address}} </h6>
+
+      <br>
+      <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end" class="main-light-color">Premise No</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.address" name=" address">
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end" class="main-light-color">Locality</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.locality" name="locality"></ion-input>
+      </ion-item>
+
+      <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end" class="main-light-color">LandMark</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.landMark" name="landMark">
+        </ion-input>
+      </ion-item>
+
+      <!-- <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end" class="main-light-color">City</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.city" name="city"></ion-input>
+      </ion-item> -->
+
+      <!-- <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end">Distic</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.distic" name="distic"></ion-input>
+      </ion-item>
+      <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end">State</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.state" name="state">
+        </ion-input>
+      </ion-item>
+      <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end">Contry</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.country" name="country"></ion-input>
+      </ion-item>
+      <ion-item class="stylist-input" lines="none" color="undefine">
+        <ion-label slot="end">Pin Code</ion-label>
+        <ion-input class="opacity-1" [(ngModel)]="address.pincode" name="pincode"></ion-input>
+      </ion-item> -->
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" color='undefine' (click)="gotoWelcomPage()" class="full-with-btn  mt-20">SET
+            LOCATION</ion-button>
+        </ion-col>
+      </ion-row>
+
+
+    </form>
+
+  </div>
+</ion-content>

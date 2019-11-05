@@ -1,0 +1,8 @@
+{
+  "appId": "com.flowfreak.crab",
+  "appName": "com.flowfreak.crab",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "linuxAndroidStudioPath": "/var/.../studio.sh"
+}

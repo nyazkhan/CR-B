@@ -1,0 +1,7 @@
+{
+  "name": "crabapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,83 @@
+
+
+  #map {
+    // width: 440px;
+    height: 100%;
+  }
+  #listing {
+    position: absolute;
+    width: 200px;
+    height: 470px;
+    overflow: auto;
+    left: 442px;
+    top: 0px;
+    cursor: pointer;
+    overflow-x: hidden;
+  }
+  #findhotels {
+    font-size: 14px;
+  }
+  #locationField {
+    -webkit-box-flex: 1 1 190px;
+    -ms-flex: 1 1 190px;
+    flex: 1 1 190px;
+    margin: 0 8px;
+  }
+  #controls {
+    -webkit-box-flex: 1 1 140px;
+    -ms-flex: 1 1 140px;
+    flex: 1 1 140px;
+  }
+  #autocomplete {
+    width: 75%;
+    padding: 10px;
+    font-size: 15px;
+    top: 20px !important;
+    // position: absolute !important;
+    border: 1px solid var(--main-white-font-color);
+    // left: 5% !important;
+    // right: 5% !important;
+    color: var(--main-font-color);
+  }  
+  ::placeholder{
+    color: var(--main-font-color);
+  }
+  input:focus{
+    outline:none !important;
+  }
+  .input {
+    background-color: var(--main-white-font-color);
+    padding: 0 !important;
+  }
+  .map-setting-part{
+    background-color: var(--main-white-font-color);
+    padding: 20px 30px;
+  }
+  .stylist-input{
+    border: 1px solid var(--main-border-color);
+    border-radius: 6px;
+    font-size: 15px;
+    color: var(--main-font-color);
+    margin-bottom: 20px;
+  }
+ion-button.full-with-btn{
+    background-color: var(--main-btn-background);
+    color: var(--main-white-font-color);
+    font-size: 12px;
+    height: 45px;
+    // border: 1px solid var(--main-font-color);
+    border-radius: 4px;
+    width: 100%;
+}
+.ion-label {
+  font-size: 14px;
+}
+.opacity-1{--placeholder-opacity: 1  !important;}
+ion-input{
+  --padding-start: 0px;
+}
+.all-content-center{
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}

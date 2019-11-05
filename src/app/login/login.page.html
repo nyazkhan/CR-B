@@ -1,0 +1,126 @@
+<ion-content>
+
+  <ion-slides options="myOptions" class="swiper-no-swiping">
+    <ion-slide class="ion-padding " style=" vertical-align:top">
+      <ion-row>
+        <ion-col class="ion-padding">
+
+          <ion-row>
+            <ion-col>
+
+              <img style="width: 95%;" src="assets/login1.svg" class="img-logo">
+
+              <h6 style="font-size: 18px !important" class="ion-text-center bold">Create A New Account
+                /
+                Login</h6>
+
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-item class="stylist-input" lines="none" color="undefine">
+                <ion-label slot="end" style="font-size: 12px;" class="main-light-color">Mobile Number</ion-label>
+                <ion-input class="opacity-1" type="number" (keyup)="phoneValidation()" name="phoneNo"
+                  [(ngModel)]="phoneNo">
+                </ion-input>
+
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <!-- <ion-text class="error ion-text-center">{{error}}</ion-text> -->
+          <ion-row>
+            <ion-col>
+              <ion-button expand="block"   (click)="onSignInSubmit()" color='undefine'
+                class="full-with-btn  mt-20 transition">Send
+                OTP</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div id="recaptcha"></div>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+
+    <ion-slide class="ion-padding " style=" vertical-align:top">
+      <ion-row class="login-screen">
+        <div class="ion-padding login-screen-content">
+          <p class="bold ion-text-left">OTP recived on</p>
+          <ion-row>
+            <ion-col>
+              <ion-text class="block btn-color"><span class="ion-float-left">+91 {{phoneNo}}</span>
+                <span style="float: right;" class="link-btn" (click)="previous()">Change</span></ion-text>
+            </ion-col>
+          </ion-row>
+
+          <br>
+          <br>
+
+
+          <ion-row>
+            <ion-col class="all-content-center">
+              <img src="assets/otp.svg" class="img-logo" style="height: 75%;">
+            </ion-col>
+          </ion-row>
+
+          <br>
+
+
+          <p class="ion-text-center bold">Enter 6 Digit OTP Received</p>
+
+          <br>
+
+
+
+          <ion-item class="stylist-input" lines="none" color="undefine">
+            <ion-label slot="end" class="main-light-color">OTP</ion-label>
+            <ion-input class="opacity-1" [(ngModel)]="otp" name="otp" placeholder="OTP"></ion-input>
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <ion-button expand="block" (click)="otpSummit()" color='undefine' class="full-with-btn  mt-20 transition">
+                Verify OTP</ion-button>
+            </ion-col>
+          </ion-row>
+
+          <br>
+          <ion-row>
+            <ion-col>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-row>
+    </ion-slide>
+
+    <ion-slide class="ion-padding " style=" vertical-align:top">
+      <div class="image-box">
+        <div class="center-box">
+          <img src="assets/tik.svg" class="ion-text-center" style="height: 30px;">
+          <h4 class="ion-text-center success-text bold">
+            OTP Verified Successfully</h4>
+        </div>
+      </div>
+
+
+      <ion-row>
+        <ion-col class="all-content-center" style=" margin-bottom: 120px;">
+          <img src="assets/welcomeToCrab.svg" class="img-logo">
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col class="ion-padding">
+          <ion-button expand="block" color='undefine' (click)="goToMap()" class="full-with-btn  mt-20 transition">
+            ONBOARD YOUR RESTAURANT</ion-button>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-slide>
+  </ion-slides>
+</ion-content>

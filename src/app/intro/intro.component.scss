@@ -1,0 +1,39 @@
+
+ion-slides{
+    height: 100vh !important;
+}
+ion-slide{
+    padding-top: 30px;
+}
+
+.intro-content {
+    text-align: left;
+    position: absolute;
+    bottom: 5%;
+    padding: 0 20px;
+}
+.intro-content h2{
+    font-size: 7vw;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--dark-black-color);
+}
+.intro-content h5{
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 26px;
+    width: 90%;
+    color: var(--light-black-color);
+}
+.intro-content p{
+    float: right;
+    padding: 0 20px;
+    font-weight: 500;
+}
+.next-intro{
+    color: var(--main-btn-background);
+    float: right;
+    text-transform: unset;
+    font-size: 16px;
+    padding: 0px 10px;
+}
